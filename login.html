@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ElectroMart</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login to ElectroMart</h1>
+        <form id="loginForm" class="login-form">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+
+            <p class="register-link">Don't have an account? <a href="register.html">Register here</a></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            // Simulate successful login
+            localStorage.setItem("isLoggedIn", true);
+
+            // Redirect to home page after login
+            window.location.href = "home.html";
+        });
+    </script>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+    
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+    
+            // Retrieve registered user data from localStorage
+            const registeredUser = JSON.parse(localStorage.getItem('registeredUser'));
+    
+            // Validate login credentials
+            if (registeredUser && registeredUser.email === email && registeredUser.password === password) {
+                alert("Login successful!");
+                localStorage.setItem("isLoggedIn", true);
+                window.location.href = "home.html"; // Redirect to home page after successful login
+            } else {
+                alert("Invalid email or password.");
+            }
+        });
+    </script>
+    
+</body>
+</html>

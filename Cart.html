@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - ElectroMart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section id="cart">
+        <!-- Cart Items will be displayed here -->
+        <div id="cart-items"></div>
+        <div id="message"></div>
+
+        <!-- Total Section -->
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        
+        <!-- Cart Actions -->
+        <button onclick="proceedToBuyAll()">Proceed to Buy All</button>
+        <button onclick="clearCart()">Clear Cart</button>
+    </section>
+    <button id="logout-button" style="display: none;">Logout</button>
+    <footer>
+        <p>&copy; 2024 ElectroMart. All rights reserved.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="logout.js"></script>
+</body>
+</html>

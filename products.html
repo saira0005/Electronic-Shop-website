@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroMart - Electronics Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ElectroMart</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>                
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="my-account.html">My Account</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to ElectroMart</h2>
+        <p>Your one-stop shop for the latest electronics!</p>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <!-- Product 1 -->
+        <div class="product">
+            <h3>Samsung S23 Ultra</h3>
+            <img src="Images/Samsungs23.jpeg" alt="Samsung S23 Ultra">
+            <p>Price: $499.99</p>
+            <button onclick="addToCart('Samsung S23 Ultra', 499.99, 'Images/Samsungs23.jpeg')">Add to Cart</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product">
+            <h3>Lenovo Ideapad Gaming i3</h3>
+            <img src="Images/Lenovogamingi3.jpg" alt="Lenovo Ideapad Gaming i3">
+            <p>Price: $899.99</p>
+            <button onclick="addToCart('Lenovo Ideapad Gaming i3', 899.99, 'Images/Lenovogamingi3.jpg')">Add to Cart</button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product">
+            <h3>Sony Overhead Headphones</h3>
+            <img src="Images/SONYOVERHEAD.jpg" alt="Sony Overhead Headphones">
+            <p>Price: $199.99</p>
+            <button onclick="addToCart('Sony Overhead Headphones', 199.99, 'Images/SONYOVERHEAD.jpg')">Add to Cart</button>
+        </div>
+        <!-- Product 4 (Fixed syntax) -->
+        <div class="product">
+            <h3>LG OLED TV</h3>
+            <img src="Images/LGTV.jpeg" alt="LG OLED TV">
+            <p>Price: $1799.99</p>
+            <button onclick="addToCart('LG OLED TV', 1799.99, 'Images/LGTV.jpeg')">Add to Cart</button>
+        </div>
+        <!-- Product 5 (Fixed syntax) -->
+        <div class="product">
+            <h3>iPhone 14 Pro Max</h3>
+            <img src="Images/iphone14.jpeg" alt="iPhone 14 Pro Max">
+            <p>Price: $1199.99</p>
+            <button onclick="addToCart('iPhone 14 Pro Max', 1199.99, 'Images/iphone14.jpeg')">Add to Cart</button>
+        </div>
+        <!-- Product 6 (Fixed syntax) -->
+        <div class="product">
+            <h3>Apple Watch</h3>
+            <img src="Images/Applewatch.jpg" alt="Apple Watch">
+            <p>Price: $399.99</p>
+            <button onclick="addToCart('Apple Watch', 399.99, 'Images/Applewatch.jpg')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>JBL Speaker</h3>
+            <img src="Images/6356535_sd.avif" alt="JBL Speaker">
+            <p>Price: $500</p>
+            <button onclick="addToCart('JBL Speaker', 500, 'Images/6356535_sd.avif')">Add to Cart</button>
+        </div>
+        
+        
+        
+    </section>
+    <button id="logout-button" style="display: none;">Logout</button>
+    <footer>
+        <p>&copy; 2024 ElectroMart. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="logout.js"></script>
+</body>
+</html>

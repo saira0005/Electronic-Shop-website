@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - ElectroMart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Account</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="my-account.html">My Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="account">
+        <h2>Your Account Details</h2>
+        <p>Total Reward Points: <span id="reward-points">0</span></p>
+        <!-- Other account details can go here, like past orders or account settings -->
+    </section>
+    <button id="logout-button" style="display: none;">Logout</button>
+    <footer>
+        <p>&copy; 2024 ElectroMart. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to display reward points on the account page
+        function displayRewardPoints() {
+            const rewardPoints = localStorage.getItem('rewardPoints') || 0;
+            document.getElementById('reward-points').innerText = rewardPoints;
+        }
+       
+        // Call this function to populate reward points on page load
+        window.onload = displayRewardPoints;
+    </script>
+    <script src="logout.js"></script>
+</body>
+</html>
